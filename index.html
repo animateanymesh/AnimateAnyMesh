@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content=".">
+    <meta name="keywords"
+          content="StableDepth">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StableDepth</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/twentytwenty.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./img/logo.png">
+
+
+    <script src="./static/js/jquery-3.2.1.min.js"></script>
+    <script src="./static/js/jquery.event.move.js"></script>
+    <script src="./static/js/jquery.twentytwenty.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/fontawesome.all.min.js"></script>
+</head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LKCDBW8851"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-LKCDBW8851');
+</script>
+
+
+<body>
+
+
+<section class="hero teaser ">
+    <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+            <div class="columns is-centered">
+                <div class="column has-text-centered ">
+                    <img src="img/logo.png" style="height:170px; margin-bottom: -10px;"></img>
+                    <h1 class="title is-1 publication-title has-text-centered" style="font-size: 2.5rem; line-height: 1.3;">
+                        A Feed-Forward 4D Foundation Model for Text-Driven Universal Mesh Animation
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+        <div class="container" style="text-align: left; ">
+            <div id="results-carousel-horizontal" class="carousel results-carousel">
+                
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./demo_source/combined/link_animation_combined.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./demo_source/combined/mime_animation_combined.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./demo_source/combined/dragon_animation_combined.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./demo_source/combined/comp1_animation_combined.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./demo_source/combined/flower_animation_combined.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./demo_source/combined/hunter_animation_combined.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./demo_source/combined/trex_animation_combined.mp4" type="video/mp4">
+                </video>
+
+            </div>
+
+            <div class="content has-text-justified" style="margin-top: 15px;">
+                We propose <b>AnimateAnyMesh</b>, the first feed-forward framework for text-driven universal mesh animation, enabling generation of high-quality animations for meshes of arbitrary topology within a few seconds.
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#results-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+        bulmaCarousel.attach('#results-carousel-vertical', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
+
+
+<br><br><br>
+
+<section class="hero teaser">
+    <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-fifths" style=" margin-top: 30px; margin-bottom: 20px;">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+
+                        
+                        Recent advances in 4D content generation have attracted increasing attention, yet creating high-quality animated 3D models remains challenging due to the complexity of modeling spatio-temporal distributions and the scarcity of 4D training data. 
+                        In this paper, we present AnimateAnyMesh, the first feed-forward framework that enables efficient text-driven animation of arbitrary 3D meshes. Our approach leverages a novel DyMeshVAE architecture that effectively compresses and reconstructs dynamic mesh sequences by disentangling spatial and temporal features while preserving local topological structures. 
+                        To enable high-quality text-conditional generation, we employ a Rectified Flow-based training strategy in the compressed latent space. Additionally, we contribute the DyMesh Dataset, containing over 4M diverse dynamic mesh sequences with text annotations. Experimental results demonstrate that our method generates semantically accurate and temporally coherent mesh animations in a few seconds, significantly outperforming existing approaches in both quality and efficiency. 
+                        Our work marks a substantial step forward in making 4D content creation more accessible and practical. All the data, code, and models will be open-released.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="hero teaser">
+    <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-fifths" style=" margin-top: 30px; margin-bottom: 20px;">
+                    <h2 class="title is-3">Framework</h2>
+                    <div class="content has-text-justified">                       
+                        AnimateAnyMesh consists of two key components: DyMeshVAE and Shape-Guided Text-to-Trajectory Model. The former effectively handles meshes of arbitrary topology by decomposing them into initial frames and relative trajectories, which are then compressed into a structured latent space, while the latter learns to generate trajectory features conditioned on both the initial mesh latent and text embeddings with a rectified flow-based training strategy.
+                        <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
+                            <img id="method" width="100%" src="./img/AnimateAnyMesh.png"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">More Animation Results</h2>
+
+        <div class="container" style="text-align: left; ">
+            <!-- <div id="results-carousel-horizontal" class="carousel results-carousel"> -->
+                
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./demo_source/grid_output.mp4" type="video/mp4">
+                </video>
+
+
+            <!-- </div> -->
+
+            <div class="content has-text-justified" style="margin-top: 15px;">
+                <b>AnimateAnyMesh</b> achieves state-of-the-art performance in text-driven mesh animation, combining high fidelity, versatility, and computational efficiency (a few seconds per animation).
+            </div>
+
+                
+            </div>
+        </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">Animation Under Different Seeds</h2>
+
+        <div class="container" style="text-align: left; ">
+            <!-- <div id="results-carousel-horizontal" class="carousel results-carousel"> -->
+                
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./demo_source/seed.mp4" type="video/mp4">
+                </video>
+
+
+            <!-- </div> -->
+
+            <div class="content has-text-justified" style="margin-top: 15px;">
+                <b>AnimateAnyMesh</b> generates diverse high-quality animations under the same conditions (prompt for the above animations: The girl is dancing) with different seeds.
+            </div>
+
+                
+            </div>
+        </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#comparison-depthpro', {
+            slidesToScroll: 2,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: false,
+        });
+
+        $(".twentytwenty-container-depthpro").twentytwenty({
+            before_label: 'Depth Pro',
+            after_label: 'Ours',
+            default_offset_pct: 0.5,
+            no_overlay: false,
+            //move_slider_on_hover: true,
+        });
+
+    });
+</script>
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">Examples of Dynamic Mesh Sequences in DyMesh Dataset</h2>
+            <div id="comparison-base" class="carousel results-carousel">
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./demo_source/dymesh_f16_part1.mp4" type="video/mp4">
+                    </video>
+                    
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./demo_source/dymesh_f32_part1.mp4" type="video/mp4">
+                    </video>
+                    
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./demo_source/dymesh_f16_part2.mp4" type="video/mp4">
+                    </video>
+                    
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./demo_source/dymesh_f32_part2.mp4" type="video/mp4">
+                    </video>
+                    
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./demo_source/dymesh_f16_part3.mp4" type="video/mp4">
+                    </video>
+                    
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./demo_source/dymesh_f32_part3.mp4" type="video/mp4">
+                    </video>
+                    
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./demo_source/dymesh_f16_part4.mp4" type="video/mp4">
+                    </video>
+                    
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./demo_source/dymesh_f32_part4.mp4" type="video/mp4">
+                    </video>
+                    
+                </div>
+
+                
+
+            </div>
+
+            <div class="content has-text-justified" style="margin-top: 15px;">
+                We curate over 4M dynamic mesh sequences (16/32 frames) as the proposed <b>DyMesh</b> Dataset. We showcase some examples above (Left: 16 frames. Right: 32 frames).
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#cmp-point-carousel-horizontal', {
+            slidesToScroll: 2,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#comparison-base', {
+            slidesToScroll: 2,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: false,
+        });
+
+        $(".twentytwenty-container-bottom").twentytwenty({
+            before_label: 'Base',
+            after_label: 'Ours',
+            default_offset_pct: 0.5,
+            no_overlay: false,
+            // move_slider_on_hover: true,
+        });
+
+    });
+</script>
+
+
+<footer class="footer">
+    <div class="hero-body">
+        <div class="columns is-two-fifths is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        Website template credit to <a
+                            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and is licensed under a <a
+                            rel="license"
+                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                        Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
